@@ -15,14 +15,15 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className="primary__content">
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
           <footer>
             © {new Date().getFullYear()} me
           </footer>
         </div>
-      </>
+      </div>
     )}
   />
 )
