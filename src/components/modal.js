@@ -78,7 +78,7 @@ class CustomizedDialogDemo extends React.Component {
   render() {
     return (
       <div>
-        <Button variant="raised" style={darkTheme} onClick={this.handleClickOpen}>
+        <Button variant="contained" style={darkTheme} onClick={this.handleClickOpen}>
           Read More
         </Button>
         <Dialog

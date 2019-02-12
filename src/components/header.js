@@ -81,7 +81,7 @@ const styles = theme => ({
 
 class PersistentDrawerLeft extends React.Component {
   state = {
-    open: false,
+    open: true,
   };
 
   handleDrawerOpen = () => {
@@ -136,7 +136,7 @@ class PersistentDrawerLeft extends React.Component {
           </div>
           <Divider />
           <List>
-            {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Home', 'Apply', 'About', 'Streams', 'Logs'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <HomeIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
@@ -144,14 +144,6 @@ class PersistentDrawerLeft extends React.Component {
             ))}
           </List>
           <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <HomeIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
         </Drawer>
       </div>
     );
