@@ -1,0 +1,6 @@
+.primary__content {
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 10vw;
+  grid-template-rows: 8vh 92vh;
+  overflow: hidden;
+}

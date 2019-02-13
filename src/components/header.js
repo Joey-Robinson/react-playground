@@ -16,9 +16,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import HomeIcon from '@material-ui/icons/Home';
-import { Grid } from '@material-ui/core';
+import CreateIcon from '@material-ui/icons/Create';
+import Videocam from '@material-ui/icons/Videocam';
+import ListIcon from '@material-ui/icons/List';
+import FaceIcon from '@material-ui/icons/Face';
+import { Link } from 'gatsby';
 
 const drawerWidth = 240;
 
@@ -100,7 +103,7 @@ class PersistentDrawerLeft extends React.Component {
       <div className={classes.root}>
         <CssBaseline />
         <AppBar
-          style={{background: `#1a237e`}}
+          style={{background: `#512DA8`}}
           position="fixed"
           className={classNames(classes.appBar, {
             [classes.appBarShift]: open,
@@ -136,12 +139,46 @@ class PersistentDrawerLeft extends React.Component {
           </div>
           <Divider />
           <List>
-            {['Home', 'Apply', 'About', 'Streams', 'Logs'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <HomeIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
+            <Link to="/home/">
+            <ListItem button>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+            </Link>
+            <Link to="/apply/">
+              <ListItem button>
+                <ListItemIcon>
+                  <CreateIcon />
+                </ListItemIcon>
+                <ListItemText primary="Apply" />
               </ListItem>
-            ))}
+            </Link>
+            <Link to="/streamers/">
+            <ListItem button>
+              <ListItemIcon>
+                <Videocam />
+              </ListItemIcon>
+              <ListItemText primary="Streamers" />
+            </ListItem>
+            </Link>
+            <Link to="/logs/">
+            <ListItem button>
+              <ListItemIcon>
+                <ListIcon />
+              </ListItemIcon>
+              <ListItemText primary="Logs" />
+            </ListItem>
+            </Link>
+            <Link to="/about/">
+            <ListItem button>
+              <ListItemIcon>
+                <FaceIcon />
+              </ListItemIcon>
+              <ListItemText primary="About" />
+            </ListItem>
+            </Link>
           </List>
           <Divider />
         </Drawer>

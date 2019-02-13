@@ -4,13 +4,15 @@ import SEO from "../components/seo"
 import { Link } from 'gatsby'
 
 
-const IndexPage = () => (
+const Home = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <div className="home">
     <h1>Hi</h1>
-    <Link to="/streamers/">Work</Link>
-    <br/>
+      <Link to="/streamers/">Work</Link>
+      <br/>
+  </div>
   </Layout>
 )
 
-export default IndexPage
+export default Home

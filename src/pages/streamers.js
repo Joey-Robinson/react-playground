@@ -5,8 +5,9 @@ import SEO from "../components/seo"
 const Streamers = () => (
   <Layout>
     <SEO title="Streamers" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>From Work</h1>
-    <br/>
+    <div className="streamers">
+      <h1>From Streamers</h1>
+    </div>
   </Layout>
 )
 
